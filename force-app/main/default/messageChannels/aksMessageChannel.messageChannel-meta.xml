@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This MessageChannel is for AKS Related Component</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>This is message1</description>
+        <fieldName>message1</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>This is message2</description>
+        <fieldName>message2</fieldName>
+    </lightningMessageFields>
+    <masterLabel>AKSMessageChannel</masterLabel>
+</LightningMessageChannel>

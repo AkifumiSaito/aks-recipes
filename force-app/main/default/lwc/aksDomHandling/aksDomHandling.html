@@ -1,0 +1,28 @@
+<template>
+    <lightning-card>
+        <lightning-record-edit-form object-api-name={objectApiName} record-id={recordId} onsubmit={handleSubmit} onerror={handleError} onsuccess={handleSuccess}>
+            <lightning-layout multiple-rows="true">
+                <lightning-layout-item size="12">
+                    <lightning-input-field data-type="contact" data-name="lastname" field-name={field.lastname}></lightning-input-field>
+                </lightning-layout-item>
+                <lightning-layout-item size="12">
+                    <lightning-input-field data-type="contact" data-name="firstname" field-name={field.firstname}></lightning-input-field>
+                </lightning-layout-item>
+                <lightning-layout-item size="12">
+                    <lightning-input-field data-type="contact" data-name="email" field-name={field.email} ></lightning-input-field>
+                </lightning-layout-item>
+                <lightning-layout-item size="12">
+                    <lightning-input label="TelNo" data-name="TelNo" type="tel"  value={input.TelNo} onchange={handleFieldChange}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12">
+                </lightning-layout-item>
+            </lightning-layout>
+            <div class="slds-text-align_center">
+                <lightning-button label="Save" onclick={handleSave}></lightning-button>
+            </div>
+            <div class="slds-text-align_center">
+                <lightning-button label="Clear LastName" onclick={resetLastName}></lightning-button>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

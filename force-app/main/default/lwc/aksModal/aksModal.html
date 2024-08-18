@@ -1,0 +1,15 @@
+<template>
+    <!-- Header -->
+    <lightning-modal-header label={modalHeaderLabel}></lightning-modal-header>
+    <!-- Body　-->
+    <lightning-modal-body>
+        <div class="slds-text-align_center">{modalContent}</div>
+    </lightning-modal-body>
+    <!-- Footer -->
+    <lightning-modal-footer>
+        <div class="slds-text-align_center">
+            <lightning-button name="cancel" label="cancel" onclick={handleCancel} class="slds-m-right_x-small"></lightning-button>
+            <lightning-button name="save" label="save" variant="brand" onclick={handleSave} class="slds-m-right_x-small"></lightning-button>
+        </div>
+    </lightning-modal-footer>
+</template>

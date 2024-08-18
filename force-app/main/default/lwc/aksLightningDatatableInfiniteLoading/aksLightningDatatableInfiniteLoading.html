@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Lightning Datatable Infinite Loding">
+        <div class="slds-text-align_center">
+            <lightning-button label="Get Data" onclick={handleClick}></lightning-button>
+        </div>
+        <template lwc:if={displayData}>
+            <div class="slds-box" style="height:400px;">
+                <lightning-datatable
+                    key-field="Id"
+                    columns={columns}
+                    data={displayData}
+                    enable-infinite-loading
+                    load-more-offset="20"
+                    onloadmore={loadMoreDataHandler}
+                >  
+                </lightning-datatable>
+            </div>
+            <div class="slds-text-align_center">Status:{loadStatus}</div>
+        </template>
+    </lightning-card>
+</template>

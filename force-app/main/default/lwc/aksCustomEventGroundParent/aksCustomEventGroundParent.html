@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Ground Parent Card">
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item class="slds-box" size="6">Child1 Fired</lightning-layout-item>
+            <lightning-layout-item class="slds-box" size="6">{child1Fired}</lightning-layout-item>
+            <lightning-layout-item class="slds-box" size="6">Child2 Fired</lightning-layout-item>
+            <lightning-layout-item class="slds-box" size="6">{child2Fired}</lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+
+    <c-aks-custom-event-parent oncchange1={handleChange1} oncchange2={handleChange2}></c-aks-custom-event-parent>
+
+</template>

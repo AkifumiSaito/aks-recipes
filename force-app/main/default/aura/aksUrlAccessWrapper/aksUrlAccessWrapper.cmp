@@ -1,0 +1,6 @@
+<aura:component  implements="lightning:isUrlAddressable" description="aksUrlAccessWrapper">
+    <aura:attribute name="message" type="String"/>
+    <aura:attribute name="urlParam" type="String"/>
+    <c:aksUrlAccess message="{!v.message}" urlParam="{!v.urlParam}"/>
+    <aura:handler name="init" action="{!c.init}" value="{!this}" />
+</aura:component>

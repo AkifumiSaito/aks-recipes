@@ -1,0 +1,30 @@
+<template>
+    <lightning-card>
+        <lightning-record-edit-form object-api-name={objectApiName} record-id={recordId} onsubmit={handleSubmit} onerror={handleError} onsuccess={handleSuccess}>
+            <lightning-layout multiple-rows="true">
+                <template lwc:if={hasError}>
+                    <lightning-layout-item class="slds-box" size="12">
+                        <div class="slds-text-color_error slds-text-align_center">{errorMessage}</div>
+                    </lightning-layout-item>
+                </template>
+                <lightning-layout-item size="12">
+                    <lightning-input-field field-name={field.lastname}></lightning-input-field>
+                </lightning-layout-item>
+                <lightning-layout-item size="12">
+                    <lightning-input-field field-name={field.firstname}></lightning-input-field>
+                </lightning-layout-item>
+                <lightning-layout-item size="12">
+                    <lightning-input-field field-name={field.email}></lightning-input-field>
+                </lightning-layout-item>
+                <lightning-layout-item size="12">
+                    <lightning-input label="TelNo" data-name="TelNo" type="tel"  value={telNo} onchange={handleFieldChange}></lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item size="12">
+                </lightning-layout-item>
+            </lightning-layout>
+            <div class="slds-text-align_center">
+                <lightning-button label="Save" type="submit" disabled={disabled}></lightning-button>
+            </div>
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

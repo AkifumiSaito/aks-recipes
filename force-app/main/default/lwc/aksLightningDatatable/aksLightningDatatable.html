@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Lightning Datatable">
+        <div class="slds-text-align_center">
+            <lightning-button label="Get Data" onclick={handleClick}></lightning-button>
+        </div>
+        <template lwc:if={data}>
+            <lightning-datatable
+                key-field="Id"
+                columns={columns}
+                data={displayData}
+                onrowaction={handleAction}
+                onrowselection={handleSelection}
+                draft-values={draftValues}
+                onsave={handleSave}
+            >  
+            </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>

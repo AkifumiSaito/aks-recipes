@@ -1,0 +1,24 @@
+<template>
+    <lightning-layout multiple-rows="true">
+        <lightning-layout-item class="slds-box" size="1">#</lightning-layout-item>
+        <lightning-layout-item class="slds-box" size="2">ID</lightning-layout-item>
+        <lightning-layout-item class="slds-box" size="3">Name</lightning-layout-item>
+        <lightning-layout-item class="slds-box" size="3">Age</lightning-layout-item>
+        <lightning-layout-item class="slds-box" size="3">Pref</lightning-layout-item>
+        <template for:each={displayData} for:item="item" for:index="idx">
+            <lightning-layout-item key={item.id} class="slds-box" size="1">{idx}</lightning-layout-item>
+            <lightning-layout-item key={item.id} class="slds-box" size="2">{item.Id}</lightning-layout-item>
+            <lightning-layout-item key={item.id} class="slds-box" size="3">{item.Name}</lightning-layout-item>
+            <lightning-layout-item key={item.id} class="slds-box" size="3">{item.Age}</lightning-layout-item>
+            <lightning-layout-item key={item.id} class="slds-box" size="3">{item.Pref}</lightning-layout-item>
+        </template>
+        <template for:each={displayDataWithCalss} for:item="item" for:index="idx">
+            <lightning-layout-item key={item.id} class={item.cssClass} size="1">{idx}</lightning-layout-item>
+            <lightning-layout-item key={item.id} class={item.cssClass} size="2">{item.Id}</lightning-layout-item>
+            <lightning-layout-item key={item.id} class={item.cssClass} size="3">{item.Name}</lightning-layout-item>
+            <lightning-layout-item key={item.id} class={item.cssClass} size="3">{item.Age}</lightning-layout-item>
+            <lightning-layout-item key={item.id} class={item.cssClass} size="3">{item.Pref}</lightning-layout-item>
+        </template>
+
+</lightning-layout>
+</template>

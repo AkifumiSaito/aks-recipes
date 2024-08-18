@@ -1,0 +1,12 @@
+<template>
+    <template lwc:if={isLoading}>
+        <lightning-spinner alternative-text="Loading" size="large" variant="brand"></lightning-spinner>
+    </template>
+
+    <div class="slds-text-align_center">
+        <lightning-button label="Start Loading" onclick={handleClick}></lightning-button> 
+    </div>
+    <div style="background-color: green; height:200px">
+        Content
+    </div>
+</template>

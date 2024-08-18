@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Parent Card">
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item class="slds-box" size="6">Parent Value</lightning-layout-item>
+            <lightning-layout-item class="slds-box" size="6">{parentValue}</lightning-layout-item>
+            <lightning-layout-item class="slds-box" size="6">Child1 Value</lightning-layout-item>
+            <lightning-layout-item class="slds-box" size="6">{child1Value}</lightning-layout-item>
+            <lightning-layout-item class="slds-box" size="6">Child2 Value</lightning-layout-item>
+            <lightning-layout-item class="slds-box" size="6">{child2Value}</lightning-layout-item>
+            <lightning-layout-item class="slds-box" size="12">
+                <div class="slds-text-align_center">
+                    <lightning-button label="Reflect Parent" onclick={handleClick}></lightning-button>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+
+    <c-aks-custom-event-child1 parent-value={parentValue} child2-value={child2Value} oncchange1={handleChild1}></c-aks-custom-event-child1>
+    <c-aks-custom-event-child2 parent-value={parentValue} child1-value={child1Value} oncchange2={handleChild2}></c-aks-custom-event-child2>
+
+</template>

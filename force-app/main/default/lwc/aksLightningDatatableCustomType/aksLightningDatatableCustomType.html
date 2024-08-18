@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Lightning Datatable Custom Type">
+        <div class="slds-text-align_center">
+            <lightning-button label="Get Data" onclick={handleClick}></lightning-button>
+        </div>
+        <template lwc:if={data}>
+            <c-aks-custom-datatable-type
+                key-field="Id"
+                columns={columns}
+                data={displayData}
+                onrowselection={handleSelection}
+                draft-values={draftValues}
+                onsave={handleSave}
+            >  
+            </c-aks-custom-datatable-type>
+        </template>
+    </lightning-card>
+</template>

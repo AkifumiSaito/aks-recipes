@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Child Card 2">
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item class="slds-box" size="6">Parent Value</lightning-layout-item>
+            <lightning-layout-item class="slds-box" size="6">{parentValue}</lightning-layout-item>
+            <lightning-layout-item class="slds-box" size="6">Child1 Value</lightning-layout-item>
+            <lightning-layout-item class="slds-box" size="6">{child1Value}</lightning-layout-item>
+            <lightning-layout-item class="slds-box" size="6">Child2 Value</lightning-layout-item>
+            <lightning-layout-item class="slds-box" size="6">{child2Value}</lightning-layout-item>
+            <lightning-layout-item class="slds-box" size="12">
+                <div class="slds-text-align_center">
+                    <lightning-button label="Reflect Child2" onclick={handleClick}></lightning-button>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

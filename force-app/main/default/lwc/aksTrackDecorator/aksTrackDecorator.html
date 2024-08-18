@@ -1,0 +1,11 @@
+<template>
+    <!-- ReRendered -->
+    <div>{variable1}</div>
+    <!-- ReRendered -->
+    <div>{object1.property1}</div>
+    <!-- Not ReRendered -->
+    <div>{object2.property1}</div>
+  <div>
+    <lightning-button label="ChangeValue" onclick={handleChange} ></lightning-button>
+  </div>
+</template>
